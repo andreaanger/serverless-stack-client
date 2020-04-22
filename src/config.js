@@ -1,4 +1,6 @@
 export default {
+  MAX_ATTACHMENT_SIZE: 5000000,
+  STRIPE_KEY: "pk_test_Tt0HxUoTrPxH47IlVvAFMMZa00Y47f3IVp",
     s3: {
       REGION: "us-east-1",
       BUCKET: "andrea-notes-app"
