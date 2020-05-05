@@ -19,6 +19,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "predeploy": "REACT_APP_STAGE=prod npm run build",
+    "deploy": "aws s3 sync build/ s3://andrea-notes-app-client-code --delete",
+    "postdeploy": "aws cloudfront create-invalidation --distribution-id E3401DKKPOARQ8 --paths '/*'",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
